@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Технический аудит сайта"
+})
+
+<body>
+  <div class="wrapper">
+    @@include('html/_header.htm',{})
+    <main class="page">
+      <div class="breadcrumbs">
+        <div class="__big-container">
+          <div class="site-breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+            <span class="site-breadcrumbs__link" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+              <a href="home.html" itemprop="item">
+                <span itemprop="name">Главная</span>
+              </a>
+            </span>
+            <span class="site-breadcrumbs__separator">|</span>
+            <span class="site-breadcrumbs__title">Технический аудит</span>
+          </div>
+        </div>
+      </div>
+
+      <section class="template1-2">
+        <div class="template1-2__big-container">
+          <div class="template1-2__wrapper">
+            <div class="template1-2__bg"><img src="@img/main/template1/template1-7-bg.jpg" alt="" loading="lazy"></div>
+
+            <div class="template1-2__body">
+              <div class="template1-2__inner">
+                <div class="template1-2__title _content">
+                  <h1>Технический аудит сайта</h1>
+                </div>
+                <div class="template1-2__subtitle">Проведем технический анализ, составим прогноз получения органического траффика и дадим рекомендации по увеличению количества лидов из поисковой системы Яндекс</div>
+                <div class="template1-2__button"><a href="" data-popup="#popup" class="btn btn_bg-yellow">Заказать бесплатный аудит</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="template44">
+        <div class="template44__container">
+          <div class="template44__wrapper">
+            <div class="template44__bg"><img src="@img/main/template44/template44-bg.jpg" alt="" loading="lazy"></div>
+
+            <div class="template44__inner">
+              <div class="template44__heading">
+                <h2 class="template44__title">/ Чек-лист технического аудита сайта</h2>
+                <a href="" download="" class="template44__download"><img src="@img/icons/upload.svg" alt="" loading="lazy"></a>
+              </div>
+
+              <div class="template44__text _content">
+                <p>Чек-лист – это список основных параметров, по которым проводится аудит. </p>
+                <p>Очень важно понимать, какие элементы затрагивает технический анализ, чтобы не упустить ни один из пунктов и получить хороший результат на выходе.</p>
+              </div>
+
+              <div class="template44__row">
+                <div class="template44__left">
+                  <div class="template44__items">
+                    <div class="template44__item template44-item">
+                      <div class="template44-item__body">
+                        <div class="template44-item__caption">Размер кода</div>
+                        <div class="template44-item__text">Файл с кодом страницы должен быть не больше 200 Кбайт</div>
+                      </div>
+                    </div>
+                    <div class="template44__item template44-item">
+                      <div class="template44-item__body">
+                        <div class="template44-item__caption">Скорость загрузки</div>
+                        <div class="template44-item__text">Страница загружается не дольше 7 секунд</div>
+                      </div>
+                    </div>
+                    <div class="template44__item template44-item">
+                      <div class="template44-item__body">
+                        <div class="template44-item__caption">Индексация меню</div>
+                        <div class="template44-item__text">Система навигации на сайте должна быть открыта для индексирования</div>
+                      </div>
+                    </div>
+                    <div class="template44__item template44-item">
+                      <div class="template44-item__body">
+                        <div class="template44-item__caption">Чистота кода страницы</div>
+                        <div class="template44-item__text">Описание стилей CSS должно быть вынесено из кода страницы</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="template44__right">
+                  <div class="template44__items">
+                    <div class="template44__item template44-item">
+                      <div class="template44-item__body">
+                        <div class="template44-item__caption">Кроссбраузерность верстки</div>
+                        <div class="template44-item__text">В разных браузерах сайт должен отображаться одинаково – элементы не должны никуда «уезжать», перекрывать друг друга или пропадать</div>
+                      </div>
+                    </div>
+                    <div class="template44__item template44-item">
+                      <div class="template44-item__body">
+                        <div class="template44-item__caption">Понятные URL-адреса</div>
+                        <div class="template44-item__text">Адреса страниц должны быть понятны пользователю</div>
+                      </div>
+                    </div>
+                    <div class="template44__item template44-item">
+                      <div class="template44-item__body">
+                        <div class="template44-item__caption">Отсутствие дублей</div>
+                        <div class="template44-item__text">У главной страницы не должно быть дублей вообще. Также не должно быть технических дублей страниц</div>
+                      </div>
+                    </div>
+                    <div class="template44__item template44-item">
+                      <div class="template44-item__body">
+                        <div class="template44-item__caption">Правильность файла robots.txt</div>
+                        <div class="template44-item__text">Здесь должны быть скрыты от индексации технические страницы сайта, тестовые домены и поддомены</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('html/_footer.htm',{})
+  </div>
+  @@include('html/_popup.htm',{})
+  @@include('html/_js.htm',{})
+</body>
+
+</html>

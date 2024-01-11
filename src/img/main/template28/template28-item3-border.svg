@@ -1,0 +1,18 @@
+<svg width="155" height="420" viewBox="0 0 155 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_2107_9754)">
+<rect width="155" height="420" fill="#FC2FCF"/>
+<g filter="url(#filter0_f_2107_9754)">
+<path d="M-141.549 -106.801C-207.612 -288.687 -394.656 -244.094 -479.92 -199.062C-530.273 -156.227 -631.381 -67.9201 -632.992 -57.376C-635.006 -44.196 -244.269 649.804 -167.733 712.409C-91.1964 775.015 -10.6321 783.252 29.6501 794.785C69.9324 806.318 573.46 849.153 585.545 849.153C595.213 849.153 670.138 525.142 706.392 363.137L637.912 158.846C506.995 60.5443 262.078 -59.9436 329.753 244.516C397.427 548.976 131.027 238.627 29.6502 178.218C0.109924 158.997 -75.4863 75.0837 -141.549 -106.801Z" fill="#EEFF29"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_f_2107_9754" x="-731.848" y="-337.848" width="1537.09" height="1285.85" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="49.4241" result="effect1_foregroundBlur_2107_9754"/>
+</filter>
+<clipPath id="clip0_2107_9754">
+<rect width="155" height="420" fill="white"/>
+</clipPath>
+</defs>
+</svg>

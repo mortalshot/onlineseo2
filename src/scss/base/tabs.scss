@@ -1,0 +1,67 @@
+.tabs {
+	// .tabs_horizontal
+	&_horizontal {
+		display: grid;
+		align-items: flex-start;
+		row-gap: rem(20);
+		column-gap: rem(40);
+
+		@media (min-width: $mobile) {
+			grid-template-columns: 30% 1fr;
+		}
+		@media (min-width: $tablet) {
+			grid-template-columns: rem(390) 1fr;
+		}
+
+		.tabs__navigation {
+			@media (min-width: $mobile) {
+				display: grid;
+				align-content: flex-start;
+				justify-content: flex-start;
+				justify-items: flex-start;
+				row-gap: rem(28);
+			}
+			@media (max-width: $mobile) {
+				display: flex;
+				gap: rem(20);
+				overflow-x: auto;
+				overflow-y: hidden;
+				scrollbar-width: thin;
+				scrollbar-color: transparent transparent;
+				white-space: nowrap;
+				scrollbar-width: thin;
+				scrollbar-color: $scrollTrack $scrollThumb;
+				padding-bottom: rem(8);
+
+				&::-webkit-scrollbar {
+					height: rem(4);
+				}
+				&::-webkit-scrollbar-track {
+					background-color: $scrollTrack;
+					border-radius: 3px;
+				}
+				&::-webkit-scrollbar-thumb {
+					border-radius: 3px;
+					background-color: $scrollThumb;
+				}
+			}
+		}
+
+		.tabs__title {
+			@include adaptiveValue("font-size", 20, 18);
+			text-align: left;
+			transition: $transition ease all 0s;
+
+			&._tab-active {
+				color: #fff;
+				background-color: #5030d1;
+			}
+		}
+
+		.tabs__content {
+		}
+
+		.tabs__body {
+		}
+	}
+}
