@@ -36,6 +36,21 @@ document.addEventListener('click', function (e) {
       arrowParent.classList.toggle('_hover');
     }
   }
+
+  // if (window.innerWidth < 767.98) {
+  if (targetElement.classList.contains('template13__title')) {
+    console.log(targetElement.getBoundingClientRect());
+    const parent = targetElement.closest('.tabs__navigation');
+    const parentRect = parent.getBoundingClientRect();
+    const elemRect = targetElement.getBoundingClientRect();
+
+    console.log(parent.scrollLeft);
+    parent.scrollTo({
+      left: parent.scrollLeft + elemRect.left - 16,
+      behavior: "smooth"
+    });
+  }
+  // }
 })
 
 // Анимация печати текста
@@ -48,9 +63,10 @@ function tickerAnimation() {
       const elementTemplate = element.querySelector('.ticker__template');
 
       let ticker = new Typed(elementOutput, {
-        typeSpeed: 200,
-        backSpeed: 200,
+        typeSpeed: 150,
+        backSpeed: 150,
         startDelay: 500,
+        backDelay: 2900,
         loop: true,
         stringsElement: elementTemplate
       });

@@ -2156,6 +2156,7 @@ body::before {
 }
 
 .template1__title {
+  font-weight: 700;
   font-size: clamp( 1.75rem , 1.2243883792rem  +  2.2426095821vw , 3.125rem );
   /* 	// Если поддерживается clamp();
   	@supports (font-size: $propertyValue) {
@@ -2766,14 +2767,15 @@ body::before {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: clamp( 1.25rem , 1.0588685015rem  +  0.8154943935vw , 1.75rem );
+  font-weight: 500;
+  font-size: clamp( 1.5rem , 1.4044342508rem  +  0.4077471967vw , 1.75rem );
   /* 	// Если поддерживается clamp();
   	@supports (font-size: $propertyValue) {
   		font-size: $propertyValue;
   	}
   	// Если не поддерживается clamp();
   	@supports not (font-size: $propertyValue) {
-  		font-size: calc(1.25rem + 0.5 * (100vw - 23.4375rem) / 61.3125);
+  		font-size: calc(1.5rem + 0.25 * (100vw - 23.4375rem) / 61.3125);
   	} */
   line-height: 1.25;
 }
@@ -3505,6 +3507,15 @@ body::before {
   position: absolute;
   right: 0;
   bottom: 0;
+  max-width: clamp( 17.5rem , 14.6330275229rem  +  12.2324159021vw , 25rem );
+  /* 	// Если поддерживается clamp();
+  	@supports (max-width: $propertyValue) {
+  		max-width: $propertyValue;
+  	}
+  	// Если не поддерживается clamp();
+  	@supports not (max-width: $propertyValue) {
+  		max-width: calc(17.5rem + 7.5 * (100vw - 23.4375rem) / 61.3125);
+  	} */
 }
 
 .template7-item__body {
@@ -3558,7 +3569,7 @@ body::before {
 }
 
 .template7-item__text {
-  max-width: 18.625rem;
+  max-width: 74.5%;
 }
 
 .template8__heading {
@@ -4428,6 +4439,10 @@ body::before {
           justify-content: flex-end;
 }
 
+.template18 {
+  position: relative;
+}
+
 .template18__row {
   display: -ms-grid;
   display: grid;
@@ -5113,7 +5128,7 @@ body::before {
   	} */
 }
 
-.template26__items {
+.template26__items ._row {
   margin: clamp( -1.875rem , -0.5791284404rem  +  -1.5290519878vw , -0.9375rem );
   /* 	// Если поддерживается clamp();
   	@supports (margin: $propertyValue) {
@@ -5125,7 +5140,7 @@ body::before {
   	} */
 }
 
-.template26__items > * {
+.template26__items ._row > * {
   padding: clamp( 0.9375rem , 0.5791284404rem  +  1.5290519878vw , 1.875rem );
   /* 	// Если поддерживается clamp();
   	@supports (padding: $propertyValue) {
@@ -5212,6 +5227,7 @@ body::before {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  gap: 1.25rem;
 }
 
 .template27__head:not(:last-child) {
@@ -5227,9 +5243,6 @@ body::before {
 }
 
 .template27__text {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 81.5709969789%;
-          flex: 0 0 81.5709969789%;
   font-weight: 600;
   font-size: clamp( 1.125rem , 0.8860856269rem  +  1.0193679918vw , 1.75rem );
   /* 	// Если поддерживается clamp();
@@ -5488,6 +5501,13 @@ body::before {
   	} */
 }
 
+.template30__slider {
+  max-width: 82.75rem;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: initial !important;
+}
+
 .template30__items {
   display: -ms-grid;
   display: grid;
@@ -5685,6 +5705,10 @@ body::before {
   	@supports not (margin-bottom: $propertyValue) {
   		margin-bottom: calc(2rem + 1.5 * (100vw - 23.4375rem) / 61.3125);
   	} */
+}
+
+.template31__button .btn {
+  line-height: 140%;
 }
 
 .template32__heading:not(:last-child) {
@@ -6363,14 +6387,14 @@ body::before {
 
 .template37-item {
   width: 100%;
-  max-width: clamp( 16.875rem , 13.7691131498rem  +  13.251783894vw , 25rem );
+  max-width: clamp( 20.9375rem , 19.3845565749rem  +  6.625891947vw , 25rem );
   /* 	// Если поддерживается clamp();
   	@supports (max-width: $propertyValue) {
   		max-width: $propertyValue;
   	}
   	// Если не поддерживается clamp();
   	@supports not (max-width: $propertyValue) {
-  		max-width: calc(16.875rem + 8.125 * (100vw - 23.4375rem) / 61.3125);
+  		max-width: calc(20.9375rem + 4.0625 * (100vw - 23.4375rem) / 61.3125);
   	} */
   margin-left: auto;
   margin-right: auto;
@@ -6425,29 +6449,21 @@ body::before {
 }
 
 .template37-item__val {
-  font-size: clamp( 2.25rem , 1.6766055046rem  +  2.4464831804vw , 3.75rem );
+  font-size: clamp( 2.5rem , 2.0221712538rem  +  2.0387359837vw , 3.75rem );
   /* 	// Если поддерживается clamp();
   	@supports (font-size: $propertyValue) {
   		font-size: $propertyValue;
   	}
   	// Если не поддерживается clamp();
   	@supports not (font-size: $propertyValue) {
-  		font-size: calc(2.25rem + 1.5 * (100vw - 23.4375rem) / 61.3125);
+  		font-size: calc(2.5rem + 1.25 * (100vw - 23.4375rem) / 61.3125);
   	} */
   line-height: 1.1833333333;
 }
 
 .template37-item__text {
-  font-size: clamp( 1.125rem , 0.9816513761rem  +  0.6116207951vw , 1.5rem );
-  /* 	// Если поддерживается clamp();
-  	@supports (font-size: $propertyValue) {
-  		font-size: $propertyValue;
-  	}
-  	// Если не поддерживается clamp();
-  	@supports not (font-size: $propertyValue) {
-  		font-size: calc(1.125rem + 0.375 * (100vw - 23.4375rem) / 61.3125);
-  	} */
-  line-height: 1.6666666667;
+  font-size: 1.5rem;
+  line-height: 1.2083333333;
   max-width: 16.875rem;
   margin-left: auto;
   margin-right: auto;
@@ -6897,14 +6913,14 @@ body::before {
 
 .template41-item__caption {
   font-weight: 600;
-  font-size: clamp( 1rem , 0.8566513761rem  +  0.6116207951vw , 1.375rem );
+  font-size: clamp( 1.125rem , 1.0294342508rem  +  0.4077471967vw , 1.375rem );
   /* 	// Если поддерживается clamp();
   	@supports (font-size: $propertyValue) {
   		font-size: $propertyValue;
   	}
   	// Если не поддерживается clamp();
   	@supports not (font-size: $propertyValue) {
-  		font-size: calc(1rem + 0.375 * (100vw - 23.4375rem) / 61.3125);
+  		font-size: calc(1.125rem + 0.25 * (100vw - 23.4375rem) / 61.3125);
   	} */
   line-height: 1.1818181818;
 }
@@ -6919,6 +6935,10 @@ body::before {
   	@supports not (margin-bottom: $propertyValue) {
   		margin-bottom: calc(0.5rem + 0.25 * (100vw - 23.4375rem) / 61.3125);
   	} */
+}
+
+.template41-item__text {
+  font-size: 1rem;
 }
 
 .template42__title {
@@ -8382,6 +8402,12 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     padding-bottom: 57.0889894419%;
   }
 
+  .template27__text {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 81.5709969789%;
+            flex: 0 0 81.5709969789%;
+  }
+
   .template28-item__content {
     -ms-grid-columns: 1fr 1.25rem 1fr;
     grid-template-columns: 1fr 1.25rem 1fr;
@@ -8601,6 +8627,11 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     	@supports not (left: $propertyValue) {
     		left: calc(-81.25rem + 12.5 * (100vw - 48rem) / 14);
     	} */
+  }
+
+  .template1-2__bg img {
+    -o-object-position: right;
+       object-position: right;
   }
 
   .template2__item {
@@ -9373,7 +9404,15 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    gap: 1.25rem;
+    row-gap: clamp( 1.5rem , 1.3566513761rem  +  0.6116207951vw , 1.875rem );
+    /* 	// Если поддерживается clamp();
+    	@supports (row-gap: $propertyValue) {
+    		row-gap: $propertyValue;
+    	}
+    	// Если не поддерживается clamp();
+    	@supports not (row-gap: $propertyValue) {
+    		row-gap: calc(1.5rem + 0.375 * (100vw - 23.4375rem) / 61.3125);
+    	} */
   }
 }
 
@@ -9522,8 +9561,29 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
             flex-direction: column;
   }
 
+  .template18__heading {
+    max-width: 70%;
+  }
+
+  .template18__form .form__title {
+    max-width: 70%;
+  }
+
   .template18__graphic {
-    display: none;
+    position: absolute;
+    right: 0;
+    top: 1.25rem;
+    opacity: 0.3;
+    max-width: 48%;
+    -webkit-transform: translateX(43.3333333333%);
+        -ms-transform: translateX(43.3333333333%);
+            transform: translateX(43.3333333333%);
+  }
+
+  .template26__items {
+    max-width: 26.25rem;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .template28-item__content {
@@ -9543,7 +9603,15 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     display: grid;
     -ms-flex-line-pack: start;
         align-content: flex-start;
-    gap: 1.25rem;
+    row-gap: clamp( 1.5rem , 1.3566513761rem  +  0.6116207951vw , 1.875rem );
+    /* 	// Если поддерживается clamp();
+    	@supports (row-gap: $propertyValue) {
+    		row-gap: $propertyValue;
+    	}
+    	// Если не поддерживается clamp();
+    	@supports not (row-gap: $propertyValue) {
+    		row-gap: calc(1.5rem + 0.375 * (100vw - 23.4375rem) / 61.3125);
+    	} */
   }
 
   .template39-indicators__item:last-child {
@@ -9566,8 +9634,46 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     left: 0;
   }
 
+  .template3-2 .template3-features__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+  }
+
+  .template3-2 .template3-features__item {
+    font-size: 2.25rem;
+  }
+
+  .template3-2 .template3-features__item:first-child {
+    padding-bottom: 2.5rem;
+  }
+
   .template3-2 .template3-features__item:first-child::before {
-    display: none;
+    right: initial;
+    left: 50%;
+    bottom: 0;
+    -webkit-transform: translate(-50%, 0) rotate(90deg);
+        -ms-transform: translate(-50%, 0) rotate(90deg);
+            transform: translate(-50%, 0) rotate(90deg);
+  }
+
+  .template3-2 .template3-features__caption {
+    font-size: 1.75rem;
+  }
+
+  .template3-2 .template3-graphics__button {
+    -webkit-box-pack: initial;
+        -ms-flex-pack: initial;
+            justify-content: initial;
+  }
+
+  .template3-2 .template3-graphics__button .btn {
+    width: 100%;
   }
 
   .template3-features__caption {
@@ -9610,14 +9716,30 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     padding: 0;
   }
 
+  .template28-item::before,
+  .template28-item::after {
+    width: 100%;
+    height: 10rem;
+    left: 0;
+  }
+
+  .template28-item::after {
+    top: initial;
+    bottom: 0;
+  }
+
+  .template28-item__center {
+    height: 3.75rem;
+  }
+
   .template28-item__center::before {
-    width: calc(100% - 2.5rem);
-    height: 1.25rem;
+    width: 100%;
+    height: 0.5rem;
     top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%) rotate(10deg);
+        -ms-transform: translate(-50%, -50%) rotate(10deg);
+            transform: translate(-50%, -50%) rotate(10deg);
   }
 
   .template30-slide__title {
@@ -9635,6 +9757,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .blog-card {
     display: -ms-grid;
     display: grid;
+  }
+
+  .blog-card__button .btn {
+    width: 100%;
   }
 
   .template39-indicators__list {
@@ -9701,6 +9827,12 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
+  }
+
+  .template41-item__image {
+    max-width: 7.5rem;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 

@@ -348,6 +348,7 @@ function initSliders() {
 			spaceBetween: 40,
 			autoHeight: false,
 			speed: 800,
+			loop: true,
 
 			// Кнопки "влево/вправо"
 			navigation: {

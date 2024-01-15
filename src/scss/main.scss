@@ -55,6 +55,7 @@
 
   // .template1__title
   &__title {
+    font-weight: 700;
     @include adaptiveValue("font-size", 50, 28);
     line-height: 117%;
   }
@@ -192,6 +193,10 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+
+      @media (min-width: $mobile) {
+        object-position: right;
+      }
     }
   }
 
@@ -479,10 +484,25 @@
     }
 
     .template3-features__list {
+      @media (max-width: $mobileM) {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+      }
     }
 
     .template3-features__item {
       position: relative;
+
+      @media (max-width: $mobileM) {
+        font-size: rem(36);
+      }
+
+      &:first-child {
+        @media (max-width: $mobileM) {
+          padding-bottom: rem(40);
+        }
+      }
 
       &:first-child {
         &::before {
@@ -497,7 +517,10 @@
           transform: translateX(100%);
 
           @media (max-width: $mobileM) {
-            display: none;
+            right: initial;
+            left: 50%;
+            bottom: 0;
+            transform: translate(-50%, 0) rotate(90deg);
           }
         }
       }
@@ -507,6 +530,10 @@
       @include adaptiveValue("font-size", 18, 16);
       color: #fc2fcf;
 
+      @media (max-width: $mobileM) {
+        font-size: rem(28);
+      }
+
       &:not(:last-child) {
         margin-bottom: rem(10);
       }
@@ -515,7 +542,8 @@
     .template3-features__link {
       display: flex;
       align-items: center;
-      @include adaptiveValue("font-size", 28, 20);
+      font-weight: 500;
+      @include adaptiveValue("font-size", 28, 24);
       line-height: math.div(35, 28);
 
       a {
@@ -534,6 +562,14 @@
 
     .template3-graphics__button {
       justify-content: flex-start;
+
+      @media (max-width: $mobileM) {
+        justify-content: initial;
+
+        .btn {
+          width: 100%;
+        }
+      }
     }
 
     .template3-features__right {
@@ -1184,6 +1220,7 @@
     position: absolute;
     right: 0;
     bottom: 0;
+    @include adaptiveValue("max-width", 400, 280);
   }
 
   // .template7-item__body
@@ -1217,7 +1254,8 @@
 
   // .template7-item__text
   &__text {
-    max-width: rem(298);
+    // max-width: rem(298);
+    max-width: percent(298, 400);
   }
 }
 
@@ -1939,12 +1977,17 @@
 
 //.template18 ====================================================================================================
 .template18 {
+  position: relative;
+
   // .template18__container
   &__container {
   }
 
   // .template18__heading
   &__heading {
+    @media (max-width: $mobile) {
+      max-width: 70%;
+    }
   }
 
   // .template18__row
@@ -1968,6 +2011,10 @@
       &:not(:last-child) {
         margin-bottom: rem(14);
       }
+
+      @media (max-width: $mobile) {
+        max-width: 70%;
+      }
     }
 
     .form__submit {
@@ -1986,7 +2033,12 @@
   // .template18__graphic
   &__graphic {
     @media (max-width: $mobile) {
-      display: none;
+      position: absolute;
+      right: 0;
+      top: rem(20);
+      opacity: 0.3;
+      max-width: percent(180, 375);
+      transform: translateX(percent(78, 180));
     }
   }
 }
@@ -2563,10 +2615,18 @@
 
   // .template26__items
   &__items {
-    @include adaptiveValue("margin", -30, -15);
+    @media (max-width: $mobile) {
+      max-width: rem(420);
+      margin-left: auto;
+      margin-right: auto;
+    }
 
-    & > * {
-      @include adaptiveValue("padding", 30, 15);
+    ._row {
+      @include adaptiveValue("margin", -30, -15);
+
+      & > * {
+        @include adaptiveValue("padding", 30, 15);
+      }
     }
   }
 
@@ -2636,6 +2696,7 @@
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
+    gap: rem(20);
 
     &:not(:last-child) {
       @include adaptiveValue("margin-bottom", 64, 32);
@@ -2644,10 +2705,13 @@
 
   // .template27__text
   &__text {
-    flex: 0 0 percent(1080, 1324);
     font-weight: 600;
     @include adaptiveValue("font-size", 28, 18);
     line-height: math.div(34, 28);
+
+    @media (min-width: $mobileM) {
+      flex: 0 0 percent(1080, 1324);
+    }
   }
 
   // .template27__arrows
@@ -2720,14 +2784,28 @@
     width: rem(155);
     position: absolute;
     top: 0;
+
+    @media (max-width: $mobileM) {
+      width: 100%;
+      height: rem(160);
+      left: 0;
+    }
   }
   &::before {
     content: "";
     left: 0;
+
+    @media (max-width: $mobileM) {
+    }
   }
   &::after {
     right: 0;
     background-color: #d5d5d5;
+
+    @media (max-width: $mobileM) {
+      top: initial;
+      bottom: 0;
+    }
   }
 
   &:nth-child(3n + 1) {
@@ -2803,6 +2881,10 @@
     position: relative;
     z-index: 2;
 
+    @media (max-width: $mobileM) {
+      height: rem(60);
+    }
+
     &::before {
       content: "";
       display: block;
@@ -2820,11 +2902,11 @@
         transform: rotate(15deg) translateY(-50%);
       }
       @media (max-width: $mobileM) {
-        width: calc(100% - rem(40));
-        height: rem(20);
+        width: calc(100%);
+        height: rem(8);
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%) rotate(10deg);
       }
     }
   }
@@ -2897,6 +2979,14 @@
 
   // .template30__arrows
   &__arrows {
+  }
+
+  // .template30__slider
+  &__slider {
+    max-width: rem($maxWidthContainer);
+    margin-left: auto;
+    margin-right: auto;
+    overflow: initial !important;
   }
 
   // .template30__wrapper
@@ -3035,6 +3125,9 @@
 
   // .template31__button
   &__button {
+    .btn {
+      line-height: 140%;
+    }
   }
 }
 
@@ -3156,12 +3249,12 @@
     @media (max-width: $tablet) {
       display: flex;
       align-items: flex-start;
-      gap: rem(20);
+      @include adaptiveValue("row-gap", 30, 24);
     }
     @media (max-width: $mobile) {
       display: grid;
       align-content: flex-start;
-      gap: rem(20);
+      @include adaptiveValue("row-gap", 30, 24);
     }
   }
 
@@ -3174,6 +3267,11 @@
 
   // .blog-card__button
   &__button {
+    .btn {
+      @media (max-width: $mobileM) {
+        width: 100%;
+      }
+    }
   }
 }
 
@@ -3578,7 +3676,7 @@
 
 .template37-item {
   width: 100%;
-  @include adaptiveValue("max-width", 400, 270);
+  @include adaptiveValue("max-width", 400, 335);
   margin-left: auto;
   margin-right: auto;
 
@@ -3622,14 +3720,14 @@
 
   // .template37-item__val
   &__val {
-    @include adaptiveValue("font-size", 60, 36);
+    @include adaptiveValue("font-size", 60, 40);
     line-height: math.div(71, 60);
   }
 
   // .template37-item__text
   &__text {
-    @include adaptiveValue("font-size", 24, 18);
-    line-height: math.div(40, 24);
+    font-size: rem(24);
+    line-height: math.div(29, 24);
     max-width: rem(270);
     margin-left: auto;
     margin-right: auto;
@@ -3954,12 +4052,18 @@
     &:not(:last-child) {
       @include adaptiveValue("margin-bottom", 30, 20);
     }
+
+    @media (max-width: $mobileSmall) {
+      max-width: rem(120);
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 
   // .template41-item__caption
   &__caption {
     font-weight: 600;
-    @include adaptiveValue("font-size", 22, 16);
+    @include adaptiveValue("font-size", 22, 18);
     line-height: math.div(26, 22);
 
     &:not(:last-child) {
@@ -3969,6 +4073,7 @@
 
   // .template41-item__text
   &__text {
+    font-size: rem(16);
   }
 }
 

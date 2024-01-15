@@ -4457,6 +4457,7 @@
             spaceBetween: 40,
             autoHeight: false,
             speed: 800,
+            loop: true,
             navigation: {
                 prevEl: ".template27 .slider-arrows__arrow_left",
                 nextEl: ".template27 .slider-arrows__arrow_right"
@@ -6675,6 +6676,17 @@ PERFORMANCE OF THIS SOFTWARE.
             _slideToggle(list);
             arrowParent.classList.toggle("_hover");
         }
+        if (targetElement.classList.contains("template13__title")) {
+            console.log(targetElement.getBoundingClientRect());
+            const parent = targetElement.closest(".tabs__navigation");
+            parent.getBoundingClientRect();
+            const elemRect = targetElement.getBoundingClientRect();
+            console.log(parent.scrollLeft);
+            parent.scrollTo({
+                left: parent.scrollLeft + elemRect.left - 16,
+                behavior: "smooth"
+            });
+        }
     }));
     function tickerAnimation() {
         const tickerItems = document.querySelectorAll(".ticker");
@@ -6682,9 +6694,10 @@ PERFORMANCE OF THIS SOFTWARE.
             const elementOutput = element.querySelector(".ticker__output");
             const elementTemplate = element.querySelector(".ticker__template");
             new i(elementOutput, {
-                typeSpeed: 200,
-                backSpeed: 200,
+                typeSpeed: 150,
+                backSpeed: 150,
                 startDelay: 500,
+                backDelay: 2900,
                 loop: true,
                 stringsElement: elementTemplate
             });
